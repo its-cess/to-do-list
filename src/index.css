@@ -11,6 +11,7 @@ body {
 h1 {
   font-family: 'Permanent Marker', cursive;
   font-size: 4rem;
+  text-align: center;
 }
 
 .container {
@@ -18,6 +19,36 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 50px auto;
   background-color: white;
   border-radius: 5px;
+  width: 600px;
+}
+
+.input-box {
+  height: 40px;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: gray;
+  text-indent: 0.5em;
+}
+
+.add-btn {
+  height: 44px;
+  width: 40px;
+  margin-left: 5px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.btn-icon {
+  color: gray;
 }
