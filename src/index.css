@@ -6,6 +6,7 @@ font-family: 'Permanent Marker', cursive;
 body {
   margin: 0;
   background-color: #f7eea6;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
@@ -22,7 +23,7 @@ h1 {
   margin: 50px auto;
   background-color: white;
   border-radius: 5px;
-  width: 600px;
+  width: 700px;
 }
 
 .input-box {
@@ -30,6 +31,7 @@ h1 {
   width: 300px;
   border: 1px solid black;
   border-radius: 5px;
+  margin: auto;
 }
 
 ::placeholder {
@@ -39,16 +41,37 @@ h1 {
   color: gray;
   text-indent: 0.5em;
 }
-
-.add-btn {
-  height: 44px;
-  width: 40px;
-  margin-left: 5px;
-  background-color: white;
+.list-container {
+  display: flex;
+  justify-content: center;
+}
+.submitButton {
   border: 1px solid black;
   border-radius: 5px;
+  background-color: #ffdb70;
+  height: 40px;
+  width: 305px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .btn-icon {
   color: gray;
 }
+
+li {
+  list-style-type: none;
+  font-size: 1.5rem;
+  padding: 5px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
