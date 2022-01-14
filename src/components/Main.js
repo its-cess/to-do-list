@@ -4,7 +4,7 @@ export default function Main() {
 const [inputText, setInputText] = React.useState(
         {
             newItem: "",
-            isDone: false
+            isDone: true
         }
     )
 function handleChange(event) {
@@ -33,13 +33,19 @@ function addItem(event) {
         }, inputText.newItem = ""
     )}
    
-const itemElements = toDoItem.map(item => 
+const itemElements = toDoItem.map(item =>
     <li 
         value={inputText.newItem} 
         isDone={inputText.isDone}
     >
-        {item}
-    </li>)
+    <div className="done-box">
+        {inputText.isDone ? <i class="check-square far fa-check-square"></i>  
+        : 
+        <i class="empty-square far fa-square"></i> }
+    </div> {item}
+    </li>
+)
+
 
 return (
 <main>

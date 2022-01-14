@@ -43,8 +43,8 @@ h1 {
 }
 .list-container {
   display: flex;
-  justify-content: center;
 }
+
 .submitButton {
   border: 1px solid black;
   border-radius: 5px;
@@ -55,10 +55,6 @@ h1 {
   font-size: 1.3rem;
   font-weight: bold;
   cursor: pointer;
-}
-
-.btn-icon {
-  color: gray;
 }
 
 li {
@@ -75,3 +71,14 @@ li {
   align-items: center;
 }
 
+.done-box{
+  display: inline-block;
+}
+
+.empty-square {
+  color: #d3d3d3;
+}
+
+.check-square {
+  color: #6bc965;
+}
