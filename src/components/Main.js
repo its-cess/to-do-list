@@ -3,13 +3,13 @@ import React from "react";
 export default function Main() {
 const [inputText, setInputText] = React.useState(
         {
-            newItem: ""
+            newItem: "",
+            isDone: false
         }
     )
     function handleChange(event) {
         const {name, value} = event.target
         setInputText(prevInputText => {
-            console.log(event.target)
             return {
                 ...prevInputText,
                 [name]: value
@@ -17,23 +17,24 @@ const [inputText, setInputText] = React.useState(
         })
     }
 
-
-
 const [toDoItem, setToDoItem] = React.useState([])
     
 const currentToDoItem = inputText.newItem
 
+
     function addItem(event) { 
        setToDoItem(prevToDoItem => {
-           event.preventDefault()
-           return [...prevToDoItem, currentToDoItem]   
-        })
-   }
-   
-const itemElements = toDoItem.map(item => 
-    <li>
-        <i class="fas fa-check-square"></i>  {item}
-    </li>)
+           return [...prevToDoItem, currentToDoItem]
+            }, inputText.newItem = ""
+        )}
+    
+        const itemElements = toDoItem.map(item => 
+            <li 
+                value={inputText.newItem} 
+                isDone={inputText.isDone}
+            >
+                {item}
+            </li>)
 
     return (
         <main>
