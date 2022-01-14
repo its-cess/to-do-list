@@ -17,7 +17,11 @@ const [inputText, setInputText] = React.useState(
         })
     }
 
-const [toDoItem, setToDoItem] = React.useState([])
+const [toDoItem, setToDoItem] = React.useState(
+    JSON.parse(localStorage.getItem("toDoItem")) || [])
+ 
+React.useEffect (() => {
+    localStorage.setItem("toDoItem", JSON.stringify(toDoItem))}, [toDoItem])
     
 const currentToDoItem = inputText.newItem
 
