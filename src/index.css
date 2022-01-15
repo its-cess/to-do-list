@@ -32,13 +32,6 @@ h1 {
   gap: 3px;
 }
 
-.list-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .input-box {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.3rem;
@@ -77,15 +70,22 @@ li {
 
 
 .done-box{
-  display: inline-block;
+  display: flex;
+  align-items: center;
   margin-right: 8px;
   cursor: pointer;
 }
 
+.done {
+  text-decoration: line-through;
+}
+
 .empty-square {
   color: #d3d3d3;
+  font-size: 1.5rem;
 }
 
 .check-square {
   color: #6bc965;
+  font-size: 1.5rem;
 }
