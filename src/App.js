@@ -1,4 +1,5 @@
 import React from "react";
+import { __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED } from "react/cjs/react.production.min";
 import List from "./components/List";
 
 export default function App() {
@@ -35,6 +36,10 @@ export default function App() {
     />
     )
 
+    function clearList() {
+      setList(prevList => [])
+    }
+
   return (
     <main className="container">
       <h1>To-Do:</h1>
@@ -45,7 +50,8 @@ export default function App() {
             placeholder="Add Item"
             name="addItem"
             value={formData.addItem}
-            onChange={handleChange}>
+            onChange={handleChange}
+            autoComplete="off">
           </input>
           <button 
             className="submitButton"
@@ -57,6 +63,13 @@ export default function App() {
               <ul>
                 {listElements}
               </ul>
+              { list.length > 0 ? 
+                <button 
+                  className="clear-btn"
+                  onClick={clearList}>
+                  Clear List
+                </button> 
+              : ""}
           </div>
       
     </main>
