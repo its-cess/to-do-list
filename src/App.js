@@ -18,8 +18,14 @@ export default function App() {
     })
   }
 
-  const [list, setList] = React.useState([])
+  const [list, setList] = React.useState(
+    JSON.parse(localStorage.getItem("list")) || []
+  )
   const newListItem = formData.addItem
+
+  React.useEffect(() => {
+    localStorage.setItem("list", JSON.stringify(list))
+  }, [list])
 
   function addToList(event) {
     event.preventDefault()
